@@ -1,0 +1,28 @@
+{
+  "name": "@ts-mono/app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "serve": "babel-watch --extensions \".ts,.tsx\" entry-point.ts",
+    "build": "babel ./ --out-dir ./ --extensions \".ts,.tsx\"",
+    "lint": "tslint --project tsconfig.json"
+  },
+  "dependencies": {
+    "@ts-mono/koaster": "1.0.0",
+    "koa": "2.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.3.3",
+    "@babel/plugin-proposal-class-properties": "7.3.3",
+    "@babel/plugin-proposal-object-rest-spread": "7.3.2",
+    "@babel/preset-env": "7.3.1",
+    "@babel/preset-typescript": "7.3.3",
+    "@types/node": "11.9.4",
+    "babel-watch": "7.0.0",
+    "tslint": "5.12.1",
+    "tslint-config-airbnb": "5.11.1",
+    "typescript": "3.3.3"
+  }
+}

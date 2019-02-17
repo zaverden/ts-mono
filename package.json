@@ -1,0 +1,18 @@
+{
+  "name": "@ts-mono/root",
+  "private": true,
+  "scripts": {
+    "serve:app": "babel-watch --extensions \".ts,.tsx\" app/entry-point.ts",
+    "build": "yarn-all build",
+    "build:app": "yarn --cwd app build",
+    "build:koaster": "yarn --cwd packages/koaster build",
+    "start:app": "yarn build && node app/entry-point.js"
+  },
+  "workspaces": {
+    "packages": [
+      ".scripts",
+      "app",
+      "packages/**"
+    ]
+  }
+}
